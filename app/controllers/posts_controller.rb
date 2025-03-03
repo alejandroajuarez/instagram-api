@@ -12,8 +12,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new!(
-      username: params[:username],
+    @post = Post.new(
+      user_id: current_user.id,
       image_url: params[:image_url],
       caption: params[:caption]
     )
