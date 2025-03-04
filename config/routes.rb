@@ -18,6 +18,9 @@ Rails.application.routes.draw do
   post "/posts" => "posts#create"
   delete "/posts/:id" => "posts#destroy"
 
+  get "/profile" => "profile#index"
+  get "/profile/:id" => "profile#show"
+
   post "/users" => "users#create"
 
   post "/sessions" => "sessions#create"

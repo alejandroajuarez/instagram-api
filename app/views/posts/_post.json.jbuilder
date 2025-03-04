@@ -5,5 +5,4 @@ json.caption    post.caption
 json.created_at post.created_at
 json.updated_at post.updated_at
 
-# json.name       user.name
-# json.email      user.email
+json.user       post.user.name

@@ -1,7 +1,12 @@
 class PostsController < ApplicationController
 
+  # In PostsController
   def index
-    @posts = Post.all
+    if params[:user_id]
+      @posts = Post.where(user_id: params[:user_id]).order(created_at: :desc)
+    else
+      @posts = Post.all.order(created_at: :desc)
+    end
     render :index
   end
 
